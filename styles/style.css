@@ -57,7 +57,7 @@ button, .btn {
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px); /* Enhanced blur for modern look */
 }
 
 .header .container {
@@ -67,9 +67,9 @@ button, .btn {
 }
 
 .header .logo h1 {
-    font-size: 24px;
+    font-size: 28px; /* Slightly larger for impact */
     font-weight: bold;
-    color: #00b8d4;
+    color: #00d4ff; /* Brighter cyan for modern feel */
 }
 
 .nav ul {
@@ -80,10 +80,26 @@ button, .btn {
 .nav a {
     font-size: 16px;
     color: white;
+    position: relative; /* For modern hover underline effect */
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #00d4ff;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
 }
 
 .nav a:hover {
-    color: #00b8d4;
+    color: #00d4ff;
 }
 
 .header-buttons {
@@ -94,20 +110,22 @@ button, .btn {
 .btn-login {
     background: transparent;
     color: white;
-    border: 1px solid #00b8d4;
+    border: 1px solid #00d4ff;
 }
 
 .btn-login:hover {
-    background: rgba(0, 184, 212, 0.1);
+    background: rgba(0, 212, 255, 0.15); /* Subtle glow */
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .btn-signup {
-    background: #00b8d4;
+    background: #00d4ff;
     color: white;
 }
 
 .btn-signup:hover {
-    background: #0097a7;
+    background: #00b8d4;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
 }
 
 /* Hero Section */
@@ -116,19 +134,19 @@ button, .btn {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 100px 0;
+    padding: 120px 0; /* More padding for grandeur */
     text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 52px; /* Larger for impact */
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
     animation: fadeInDown 1s ease-out;
 }
 
 .hero-content p {
-    font-size: 18px;
+    font-size: 20px; /* Slightly larger */
     max-width: 700px;
     margin: 0 auto 30px;
     animation: fadeIn 1.5s ease-out;
@@ -149,17 +167,23 @@ button, .btn {
     border-radius: 25px;
     font-size: 16px;
     outline: none;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15); /* Slightly more opaque */
     color: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.hero-search input:focus {
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .btn-search {
-    background: #00b8d4;
+    background: #00d4ff;
     color: white;
 }
 
 .btn-search:hover {
-    background: #0097a7;
+    background: #00b8d4;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
 }
 
 /* Features Section */
@@ -184,18 +208,24 @@ button, .btn {
 .card {
     background: #242424;
     padding: 40px 20px;
-    border-radius: 10px;
+    border-radius: 15px; /* Softer corners */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 184, 212, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
 }
 
 .card .icon {
     font-size: 50px;
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+    transform: scale(1.1);
 }
 
 .card h3 {
@@ -226,13 +256,15 @@ button, .btn {
 
 .car-item {
     background: #242424;
-    border-radius: 10px;
+    border-radius: 15px; /* Softer corners */
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .car-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
 }
 
 .car-image {
@@ -240,6 +272,11 @@ button, .btn {
     height: 200px;
     background-size: cover;
     background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.car-item:hover .car-image {
+    transform: scale(1.05);
 }
 
 .car-details {
@@ -256,7 +293,7 @@ button, .btn {
 .price {
     font-size: 22px;
     font-weight: bold;
-    color: #00b8d4;
+    color: #00d4ff;
     margin-bottom: 10px;
 }
 
@@ -268,14 +305,15 @@ button, .btn {
 
 .btn-view {
     background: transparent;
-    color: #00b8d4;
-    border: 1px solid #00b8d4;
+    color: #00d4ff;
+    border: 1px solid #00d4ff;
     width: 100%;
     padding: 10px;
 }
 
 .btn-view:hover {
-    background: rgba(0, 184, 212, 0.1);
+    background: rgba(0, 212, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .see-more {
@@ -283,14 +321,15 @@ button, .btn {
 }
 
 .btn-more {
-    background: #00b8d4;
+    background: #00d4ff;
     color: white;
     padding: 12px 30px;
     font-size: 18px;
 }
 
 .btn-more:hover {
-    background: #0097a7;
+    background: #00b8d4;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
 }
 
 /* Sell Section */
@@ -323,14 +362,15 @@ button, .btn {
 .step {
     background: #242424;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .step-number {
     width: 40px;
     height: 40px;
-    background: #00b8d4;
+    background: #00d4ff;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -342,6 +382,7 @@ button, .btn {
     top: -20px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .step h3 {
@@ -351,14 +392,15 @@ button, .btn {
 }
 
 .btn-sell {
-    background: #00b8d4;
+    background: #00d4ff;
     color: white;
     font-size: 18px;
     padding: 12px 30px;
 }
 
 .btn-sell:hover {
-    background: #0097a7;
+    background: #00b8d4;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
 }
 
 /* Testimonials */
@@ -385,10 +427,11 @@ button, .btn {
 .testimonial {
     background: #242424;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 0 10px;
     max-width: 600px;
     animation: fadeIn 2s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .quote {
@@ -400,7 +443,7 @@ button, .btn {
 
 .author {
     font-size: 16px;
-    color: #00b8d4;
+    color: #00d4ff;
 }
 
 .hidden {
@@ -435,27 +478,29 @@ button, .btn {
 .contact-form input, .contact-form textarea {
     padding: 15px;
     border: 1px solid #333;
-    border-radius: 5px;
+    border-radius: 8px; /* Softer corners */
     font-size: 16px;
     background: #242424;
     color: white;
     outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
-    border-color: #00b8d4;
-    box-shadow: 0 0 0 2px rgba(0, 184, 212, 0.3);
+    border-color: #00d4ff;
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.3);
 }
 
 .btn-submit {
-    background: #00b8d4;
+    background: #00d4ff;
     color: white;
     padding: 12px;
     font-size: 18px;
 }
 
 .btn-submit:hover {
-    background: #0097a7;
+    background: #00b8d4;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
 }
 
 .contact-info {
@@ -471,6 +516,7 @@ button, .btn {
     background: #242424;
     padding: 20px;
     border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .info-item .icon {
@@ -491,7 +537,7 @@ button, .btn {
 }
 
 .footer-logo h2 {
-    color: #00b8d4;
+    color: #00d4ff;
     margin-bottom: 10px;
 }
 
@@ -514,7 +560,7 @@ button, .btn {
 }
 
 .footer-col a:hover {
-    color: #00b8d4;
+    color: #00d4ff;
 }
 
 .footer-bottom {
