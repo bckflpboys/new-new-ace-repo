@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMarket - Modern Car Marketplace</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>AutoMarket</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cars">Browse Cars</a></li>
+                    <li><a href="#sell">Sell Your Car</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <button class="btn btn-login">Login</button>
+                <button class="btn btn-signup">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Dream Car Today</h1>
+                <p>The largest online marketplace for buying and selling cars. Explore thousands of listings and drive away with the best deals.</p>
+                <div class="hero-search">
+                    <input type="text" placeholder="Search by make, model, or keyword...">
+                    <button class="btn btn-search">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose AutoMarket?</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <div class="icon">🚗</div>
+                    <h3>Wide Selection</h3>
+                    <p>Access thousands of cars from trusted sellers across the country.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🔒</div>
+                    <h3>Secure Transactions</h3>
+                    <p>Buy and sell with confidence using our secure payment system.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💰</div>
+                    <h3>Best Deals</h3>
+                    <p>Compare prices and snag the best offers on the market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cars" class="cars">
+        <div class="container">
+            <h2>Featured Listings</h2>
+            <div class="car-grid">
+                <div class="car-item">
+                    <div class="car-image" style="background-image: url('https://via.placeholder.com/400x250?text=Car+1')"></div>
+                    <div class="car-details">
+                        <h3>2021 Tesla Model 3</h3>
+                        <p class="price">$39,999</p>
+                        <p class="info">10,000 mi • Electric • Automatic</p>
+                        <button class="btn btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="car-item">
+                    <div class="car-image" style="background-image: url('https://via.placeholder.com/400x250?text=Car+2')"></div>
+                    <div class="car-details">
+                        <h3>2020 BMW X5</h3>
+                        <p class="price">$45,500</p>
+                        <p class="info">15,000 mi • Gasoline • Automatic</p>
+                        <button class="btn btn-view">View Details</button>
+                    </div>
+                </div>
+                <div class="car-item">
+                    <div class="car-image" style="background-image: url('https://via.placeholder.com/400x250?text=Car+3')"></div>
+                    <div class="car-details">
+                        <h3>2019 Toyota Camry</h3>
+                        <p class="price">$22,000</p>
+                        <p class="info">30,000 mi • Gasoline • Manual</p>
+                        <button class="btn btn-view">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="see-more">
+                <button class="btn btn-more">See All Listings</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sell" class="sell">
+        <div class="container">
+            <h2>Sell Your Car with Ease</h2>
+            <p class="sell-description">List your car for free and reach thousands of potential buyers. Get started in just a few clicks.</p>
+            <div class="sell-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Listing</h3>
+                    <p>Provide some details about your car and upload photos.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Connect with Buyers</h3>
+                    <p>Respond to inquiries and offers directly through our platform.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Close the Deal</h3>
+                    <p>Finalize the sale with our secure transaction process.</p>
+                </div>
+            </div>
+            <button class="btn btn-sell">List Your Car</button>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p class="quote">"I found my dream car on AutoMarket within a week. The process was seamless!"</p>
+                    <p class="author">- Sarah J., Buyer</p>
+                </div>
+                <div class="testimonial hidden">
+                    <p class="quote">"Sold my SUV in just three days. Amazing platform and great support."</p>
+                    <p class="author">- Michael T., Seller</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="icon">📍</div>
+                        <p>123 Auto Lane, Car City, CA 90210</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon">📧</div>
+                        <p>support@automarket.com</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon">📞</div>
+                        <p>+1 (800) AUTO-MKT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h2>AutoMarket</h2>
+                    <p>Your trusted car marketplace.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#cars">Browse Cars</a></li>
+                            <li><a href="#sell">Sell Your Car</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AutoMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
